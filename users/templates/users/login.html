@@ -1,0 +1,29 @@
+{%extends "home/base.html"%}
+{% load crispy_forms_tags %}
+
+{%block content%}
+
+<div class="boxxing "><!-- box Begin -->
+       <div class="box-header"><!-- box-header Begin -->
+           <center><!-- center Begin -->
+               <h2> LOG IN </h2>
+           </center><!-- center Finish -->
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                         {{ form | crispy }}
+                    </fieldset>
+                   <center> <div class="form-group">
+                        <button class="btn btn-primary center" type="submit">Submit</button>
+                    </div></center>
+                </form>
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                        Need An Account? <a class="ml-2" href="{% url 'register'%}">Sign Up Now</a>
+                    </small>
+                </div>
+       </div>
+</div>
+
+
+{%endblock content%}

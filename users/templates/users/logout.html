@@ -1,0 +1,20 @@
+{%extends "home/base.html"%}
+{%block content%}
+<center>
+
+<div class="boxxing"><!-- box Begin -->
+   <div class="box-header"><!-- box-header Begin -->
+       <center><!-- center Begin -->
+           <h3> You have been logged out! </h3>
+       </center><!-- center Finish -->
+        <div class="border-top pt-3">
+            <center>
+            <h3><a href="{% url 'login'%}">Log In Again</a></h3>
+            </center>
+        </div>
+   </div>
+</div>
+</center>
+
+
+{%endblock content%}

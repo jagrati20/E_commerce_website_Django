@@ -1,0 +1,104 @@
+{%load static%}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width-device-width, initial-scale=1">
+     <title>SW PROJECT-WEB APP</title>
+     <link rel="stylesheet" href="{% static 'home/css/bootstrap-337.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
+    {%if title%}
+        <title>WEB APP-ECOMMERCE</title>
+    {%else%}
+        <title>WEB APP-ECOM</title>
+    {%endif%}
+    <title>Title</title>
+</head>
+<body>
+<div id="top">  <!-- Top begins -->
+        <div class="container"> <!-- Container begins -->
+                <ul class="menu"><!-- menu begins -->
+                    {%if user.is_authenticated%}
+                        <li><a href="{%url 'cart'%}">My Account</a></li>
+                        <li><a href="{% url 'logout'%}">Logout</a></li>
+                        <li><a href="#">Go To Cart</a></li>
+                    {% else %}
+                        <li><a href="{% url 'register'%}">Register</a></li>
+                        <li><a href="{% url 'login'%}">Login</a></li>
+                    {% endif %}
+                </ul><!-- menu ends -->
+
+        </div><!-- Container ends -->
+</div> <!-- Top ends -->
+
+
+<div id="navbar" class="navbar navbar-default"><!-- navbar navbar-default begins -->
+    <div class="container"><!-- Container begins -->
+
+       <div class="navbar-header"><!-- navbar header begins -->
+           <a href="{%url 'web_home'%}" class="navbar-brand home"><!-- navbar brand home begins -->
+               <img src="{% static 'home/images/rpi.png' %}" alt="Website Logo" >
+           </a><!-- navbar brand home ends -->
+       </div> <!-- navbar header ends -->
+
+       <div class="navbar-collpase" id="navigation"><!-- navbar-collpase collapse begin -->
+           <div class="padding-nav"> <!-- padding-nav begin -->
+               <ul class="nav navbar-nav left">
+                   {%if user.is_authenticated%}
+                   <li >
+                       <a href="{%url 'web_home'%}">Home</a>
+                   </li>
+                   <li>
+                        <a href="{%url 'shop_home'%}">Shop</a>
+                   </li>
+                   <li>
+                       <a href="{%url 'cart'%}">Shopping Cart</a>
+                   </li>
+                   <li>
+                   <a href="{%url 'contact'%}">Contact Us</a></li>
+                   {% else %}
+                   <li >
+                       <a href="{%url 'web_home'%}">Home</a>
+                   </li>
+                   <li>
+                        <a href="{%url 'shop_home'%}">Shop</a>
+                   </li>
+                   <li>
+                   <a href="{%url 'contact'%}">Contact Us</a></li>
+                   {% endif %}
+               </ul>
+           </div><!-- padding-nav ends -->
+       </div><!-- navbar header ends -->
+
+
+    </div><!-- Container ends -->
+
+</div><!-- navbar navbar-default ends -->
+
+{%if messages%}
+   {%for message in messages%}
+        <div class="alert alert-{{message.tags }}">
+            {{ message }}
+        </div>
+   {%endfor%}
+{%endif%}
+
+{% block content %}
+
+{% endblock %}
+
+<div id="footer"><!-- #footer Begin -->
+    <div class="container"><!-- container Begin -->
+        <div class="row"><!-- row Begin -->
+
+        </div><!-- row Finish -->
+    </div><!-- container Finish -->
+</div><!-- #footer Finish -->
+
+<script src="{% static 'home/js/jquery-331.min.js' %}"></script>
+<script src="{% static 'home/js/bootstrap-337.min.js' %}"></script>
+</body>
+</html>

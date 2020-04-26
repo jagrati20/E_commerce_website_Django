@@ -1,0 +1,142 @@
+
+body{
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background: #f0f0f0;
+    overflow-x: hidden;
+}
+
+#top{
+    background: #000000;
+    padding: 10px 10px;
+    font-family: Helvetica;
+}
+
+#top a{
+    color: #ffffff;
+}
+
+#top ul.menu{
+    padding-top: 5px;
+    margin: 0px;
+    text-align: right;
+    font-size: 12px;
+    list-style: none;
+    align:right;
+}
+
+#top ul.menu > li{
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+/* Header Styles */
+
+.navbar{
+    background: #ffffff;
+}
+.navbar-collapse .right{
+    float: right;
+}
+
+.navbar-brand{
+    float: left;
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 70px;
+}
+.navbar-brand:hover,
+
+.navbar-brand:focus{
+    text-decoration: none;
+}
+
+.navbar ul.nav > li > a{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.navbar ul.nav > li > a:hover{
+    background: #e7e7e7;
+}
+
+.padding-nav{
+    padding-top: 10px;
+}
+
+.btn-primary{
+    color: rgb(255, 255, 255);
+    background: rgb(79, 191, 168);
+    border-color: rgb(65, 179, 156);
+}
+
+.box{
+    background: #ffffff;
+    margin: 0 0 30px;
+    border: solid 2px #e6e6e6;
+    box-sizing: 250px 200px;
+    padding: 15px;
+    align: center;
+}
+.boxxing{
+    background: #ffffff;
+    margin: 100px 450px 300px;
+    border: solid 2px #e6e6e6;
+    box-sizing: 250px 200px;
+    padding: 15px;
+    align: center;
+}
+
+/* Latest Products Styles */
+#hot h2{
+    font-size: 20px;
+    font-weight: 200;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#content{
+   padding-left: 25px; 
+}
+
+#content .product{
+    background: #000000;
+    border: solid 1px #e6e6e6;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+#content .product .text{
+    padding: 10px 10px 0px;
+}
+#content .product .text p.price{
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+}
+#content .product .text .button{
+    text-align: center;
+    clear: both;
+}
+#content .product .text .button .btn{
+    margin-bottom: 10px;
+}
+#content .product .text h3{
+    text-align: center;
+    font-size: 20px;
+}
+
+/*  Footer Styles  */
+
+#footer{
+    background: #000000;
+    padding: 20px 20px;
+}
+
+.product a img.img-responsive{
+    max-height: 250px;
+    width: 100%;
+}
