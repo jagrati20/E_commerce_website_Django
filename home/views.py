@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import Product
+
 
 posts=[
     {
@@ -53,3 +54,5 @@ def contact(request):
         'posts': posts
     }
     return render(request, 'home/contact.html', context)
+
+

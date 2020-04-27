@@ -2,7 +2,7 @@
 {%load static%}
 {%block content%}
 
-<div id="topping">  <!-- Top begins -->
+<div id="topping" >  <!-- Top begins -->
     <div class="container"> <!-- Container begins -->
         <div class="navbar navbar-default">
             <center>
@@ -69,10 +69,10 @@
        </div><!-- box ends -->
 </div><!-- #hot ends -->
 </section>
-<div class="container">
+<div id="mid" class="container" data-aos="fade-up">
 {%for post in posts2%}
 <center>
-<div class=" col-sm-3 col-md-3"><!-- col-md-9 Begin -->
+<div class=" col-sm-5"><!-- col-md-9 Begin -->
    <div class="box"><!-- box Begin -->
        <div class="box-header"><!-- box-header Begin -->
            <div class="product">
@@ -85,8 +85,7 @@
                         </h3>
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
-
-                            <a href="#" class="btn btn-primary">
+                            <a href="{%url 'cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
                         </p>
@@ -116,10 +115,10 @@
 </section>
 
 
-<div class="container">
+<div id="mid" class="container">
 {%for post in posts1%}
-<center>
-    <div class=" col-sm-3 col-md-3">
+    <center>
+        <div class=" col-sm-5">
 <!-- col-md-9 Begin -->
    <div class="box"><!-- box Begin -->
        <div class="box-header"><!-- box-header Begin -->
@@ -134,13 +133,14 @@
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
 
-                            <a href="#" class="btn btn-primary">
+                            <a href="{%url 'cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
                         </p>
                     </div><!-- text ends -->
            </div><!-- product ends -->
        </div>
+
     </div>
     </div>
 </center>
@@ -161,10 +161,10 @@
 </section>
 
 
-<div class="container">
+<div id="mid" class="container">
 {%for post in posts7%}
 <center>
-    <div class=" col-sm-3 col-md-3">
+    <div class=" col-sm-5">
 <!-- col-md-9 Begin -->
    <div class="box"><!-- box Begin -->
        <div class="box-header"><!-- box-header Begin -->
@@ -179,7 +179,7 @@
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
 
-                            <a href="#" class="btn btn-primary">
+                            <a href="{%url 'cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
                         </p>
@@ -209,10 +209,10 @@
 </section>
 
 
-<div class="container">
+<div id="mid" class="container">
 {%for post in posts4%}
 <center>
-<div class=" col-sm-3 col-md-3"><!-- col-md-9 Begin -->
+<div class=" col-sm-5"><!-- col-md-9 Begin -->
    <div class="box"><!-- box Begin -->
        <div class="box-header"><!-- box-header Begin -->
            <div class="product">
@@ -226,7 +226,7 @@
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
 
-                            <a href="#" class="btn btn-primary">
+                            <a href="{%url 'cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
                         </p>
@@ -254,10 +254,10 @@
 </section>
 
 
-<div class="container">
+<div id="mid" class="container">
 {%for post in posts5%}
 <center>
-<div class=" col-sm-3 col-md-3"><!-- col-md-9 Begin -->
+<div class=" col-sm-5"><!-- col-md-9 Begin -->
    <div class="box"><!-- box Begin -->
        <div class="box-header"><!-- box-header Begin -->
            <div class="product">
@@ -271,7 +271,7 @@
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
 
-                            <a href="#" class="btn btn-primary">
+                            <a href="{%url 'cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
                         </p>
@@ -299,10 +299,10 @@
 </section>
 
 
-<div class="container">
+<div id="mid" class="container">
 {%for post in posts3%}
 <center>
-<div class=" col-sm-3 col-md-3"><!-- col-md-9 Begin -->
+<div class=" col-sm-5"><!-- col-md-9 Begin -->
    <div class="box"><!-- box Begin -->
        <div class="box-header"><!-- box-header Begin -->
            <div class="product">
@@ -316,7 +316,7 @@
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
 
-                            <a href="#" class="btn btn-primary">
+                            <a href="{%url 'cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
                         </p>
@@ -347,10 +347,10 @@
 
 
 
-<div class="container">
+<div id="mid" class="container">
     {%for post in posts6%}
         <center>
-            <div class=" col-sm-3 col-md-3"><!-- col-md-9 Begin -->
+            <div class=" col-sm-5"><!-- col-md-9 Begin -->
                <div class="box"><!-- box Begin -->
                    <div class="box-header"><!-- box-header Begin -->
                        <div class="product">
@@ -364,7 +364,7 @@
                                     <p class="price">$ {{post.prod_price}}</p>
                                     <p class="button">
 
-                                        <a href="#" class="btn btn-primary">
+                                        <a href="{%url 'cart'%}" class="btn btn-primary">
                                             Add to Cart
                                         </a>
                                     </p>
