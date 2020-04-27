@@ -22,9 +22,9 @@
         <div class="container"> <!-- Container begins -->
                 <ul class="menu"><!-- menu begins -->
                     {%if user.is_authenticated%}
-                        <li><a href="{%url 'cart'%}">My Account</a></li>
+
                         <li><a href="{% url 'logout'%}">Logout</a></li>
-                        <li><a href="#">Go To Cart</a></li>
+                        <li><a href="{% url 'cart'%}">Go To Cart</a></li>
                     {% else %}
                         <li><a href="{% url 'register'%}">Register</a></li>
                         <li><a href="{% url 'login'%}">Login</a></li>
