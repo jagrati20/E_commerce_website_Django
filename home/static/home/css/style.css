@@ -19,7 +19,7 @@ body{
 
 #top ul.menu{
     padding-top: 5px;
-    margin: 0px;
+    margin: 10px 10px 10px 10px;
     text-align: right;
     font-size: 12px;
     list-style: none;
@@ -27,6 +27,32 @@ body{
 }
 
 #top ul.menu > li{
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+#topping{
+    margin: 10px 10px 10px 10px;
+    background: #ffffff;
+    padding: 10px 10px;
+    font-family: Helvetica;
+}
+
+#topping a{
+    color: #000000;
+    align:center;
+}
+
+#topping ul.menu{
+    padding-top: 5px;
+    margin: 0px;
+    text-align: center;
+    font-size: 12px;
+    list-style: none;
+    align:center;
+}
+
+#topping ul.menu > li{
     display: inline-block;
     padding: 10px 10px;
 }
@@ -80,6 +106,7 @@ body{
     box-sizing: 250px 200px;
     padding: 15px;
     align: center;
+
 }
 .boxxing{
     background: #ffffff;
@@ -106,8 +133,9 @@ body{
 #content .product{
     background: #000000;
     border: solid 1px #e6e6e6;
-    margin-bottom: 30px;
-    box-sizing: border-box;
+    margin: 10px 10px 10px 10px;
+    box-sizing: content-box;
+    position: fixed;
 }
 #content .product .text{
     padding: 10px 10px 0px;
