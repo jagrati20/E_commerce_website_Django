@@ -1,34 +1,39 @@
 {%extends "home/base.html"%}
+{%load static%}
 {% load crispy_forms_tags %}
 
 {%block content%}
-
-   <div class="boxxing"><!-- box Begin -->
-
-           <center><!-- center Begin -->
-               <h2> Register a new account </h2>
-           </center><!-- center Finish -->
+<center>
+<img src="{% static 'home/images/hi.gif' %}" alt="Website Logo" height="150" width="150">
+</center>
+<div class="con">
+    <div class="boxxing"><!-- box Begin -->
+        <center><!-- center Begin -->
+            <h2> Register a new account </h2>
+        </center><!-- center Finish -->
+        <div class="form-group">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    {{ form | crispy }}
+                </fieldset>
                 <div class="form-group">
-                    <form method="POST">
-                        {% csrf_token %}
-                        <fieldset class="form-group">
-                            {{ form | crispy }}
-                        </fieldset>
-                        <div class="form-group">
-                            <button class="btn btn-primary" type="submit">Sign Up</button>
-                        </div>
-                    </form>
-                    <div class="border-top pt-3">
-                        <small class="text-muted">
-                            Already Have An Account? <a class="ml-2" href="{% url 'login'%}">Sign In</a>
-                        </small>
-                    </div>
+                    <center>
+                        <button class="btn btn-primary" type="submit">Sign Up</button>
+                    </center>
+
                 </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    <center>
+                        Already Have An Account? <a class="ml-2" href="{% url 'login'%}">Sign In</a>
+                    </center>
+
+                </small>
+            </div>
         </div>
     </div>
 </div>
-
-</div>
-
 
 {%endblock content%}

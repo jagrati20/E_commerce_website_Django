@@ -1,8 +1,11 @@
 {%extends "home/base.html"%}
-
+{%load static%}
 {%block content%}
-<h3 align="center">Hello {{ user.username }}!</h3>
-<center><small>Happy Shopping</small></center>
+<center>
+<img src="{% static 'home/images/hello.gif' %}" alt="Website Logo" height="100" width="200">
+</center>
+<h3 align="center" style="color:white;">{{ user.username }}!</h3>
+<center><small style="color:white;">Happy Shopping</small></center>
 <div class="boxxing">
 
 <h3 align="center">The following item are in your cart</h3>

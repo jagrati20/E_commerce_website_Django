@@ -1,4 +1,6 @@
 from django.shortcuts import render,get_object_or_404
+
+from users.models import Cart
 from .models import Product
 
 
@@ -56,3 +58,8 @@ def contact(request):
     return render(request, 'home/contact.html', context)
 
 
+def add_prods_cart(request, product):
+    print(request)
+    prod = get_object_or_404(Product,prod_title=product)
+    cart = Cart.objects.filter(user=request.user)[0]
+    cart.items.add(prod)

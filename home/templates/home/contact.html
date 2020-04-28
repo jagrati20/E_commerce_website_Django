@@ -1,7 +1,10 @@
 {%extends "home/base.html"%}
-
+{%load static%}
 {%block content%}
 
+<center>
+<img src="{% static 'home/images/email.gif' %}" alt="Website Logo" height="150" width="150">
+</center>
 <center>
 
    <div class="boxxing primary center"><!-- box Begin -->
@@ -11,13 +14,37 @@
 
             <div class="border-top pt-3">
 
-                <small style="align='center'">sharmj@rpi.edu</small>
+                <small style="align='center'">
+
+                    <a href="mailto:sharmj@rpi.edu">
+                        <img src="{% static 'home/images/mailto.png' %}" alt="Website Logo" height="30" width="30">
+                    </a>
+                    <a href="https://www.linkedin.com/in/jagrati20/">
+                        <img src="{% static 'home/images/linkedin.png' %}" alt="Website Logo" height="30" width="30">
+                    </a>
+                    <a href="https://github.com/jagrati20/E_commerce_website_Django">
+                        <img src="{% static 'home/images/github.png' %}" alt="Website Logo" height="30" width="30">
+                    </a>
+
+
+                </small>
                 <hr/>
                <h3> Abhishek Gupta </h3>
 
             <div class="border-top pt-3">
 
-                <small style="align='center'">guptaa@rpi.edu</small>
+                <small style="align='center'">
+                    <a href="guptaa10@rpi.edu">
+                    <img src="{% static 'home/images/mailto.png' %}" alt="Website Logo" height="30" width="30">
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhishek2910/">
+                    <img src="{% static 'home/images/linkedin.png' %}" alt="Website Logo" height="30" width="30">
+                    </a>
+                    <a href="https://github.com/Abhishek2202">
+                    <img src="{% static 'home/images/github.png' %}" alt="Website Logo" height="30" width="30">
+                    </a>
+
+                </small>
 
             </div>
        </div>

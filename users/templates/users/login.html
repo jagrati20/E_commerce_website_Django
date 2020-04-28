@@ -1,8 +1,11 @@
 {%extends "home/base.html"%}
+{%load static%}
 {% load crispy_forms_tags %}
 
 {%block content%}
-
+<center>
+<img src="{% static 'home/images/hello.gif' %}" alt="Website Logo" height="100" width="200">
+</center>
 <div class="boxxing "><!-- box Begin -->
        <div class="box-header"><!-- box-header Begin -->
            <center><!-- center Begin -->
@@ -19,7 +22,10 @@
                 </form>
                 <div class="border-top pt-3">
                     <small class="text-muted">
-                        Need An Account? <a class="ml-2" href="{% url 'register'%}">Sign Up Now</a>
+                        <center>
+                            Need An Account? <a class="ml-2" href="{% url 'register'%}">Sign Up Now</a>
+                        </center>
+
                     </small>
                 </div>
        </div>

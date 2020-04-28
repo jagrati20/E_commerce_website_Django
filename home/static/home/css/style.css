@@ -3,14 +3,22 @@ body{
     font-size: 14px;
     line-height: 1.42857143;
     color: #333333;
-    background: #f0f0f0;
+    background: #5858b2;
+
     overflow-x: hidden;
+
 }
 
+#con{
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 #top{
     background: #000000;
-    padding: 10px 10px;
+    padding: 5px 5px;
     font-family: Helvetica;
 }
 @media(max-width: 991px){
@@ -26,6 +34,7 @@ body{
 }
 #top a{
     color: #ffffff;
+    font-size:18px;
 }
 @media(max-width: 991px){
     #top ul.menu{
@@ -46,12 +55,7 @@ body{
     padding: 10px 10px;
 }
 
-#topping{
-    margin: 10px 10px 10px 10px;
-    background: #ffffff;
-    padding: 10px 10px;
-    font-family: Helvetica;
-}
+
 
 #topping a{
     color: #000000;
@@ -69,7 +73,7 @@ body{
 .topping-brand:hover,
 
 .topping ul.nav > li > a:hover{
-    background: #e7e7e7;
+    background: #5858b2;
 }
 
 #topping ul.menu > li{
@@ -81,6 +85,7 @@ body{
 
 .navbar{
     background: #ffffff;
+    margin: 20px 100px 10px 100px;
 }
 .navbar-collapse .right{
     float: right;
@@ -102,11 +107,13 @@ body{
 .navbar ul.nav > li > a{
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
+
 }
 
 .navbar ul.nav > li > a:hover{
-    background: #e7e7e7;
+    background: #5858b2;
+    color: #ffffff;
 }
 
 .padding-nav{
@@ -126,19 +133,26 @@ body{
     box-sizing: border-box;
     padding: 20px;
     box-shadow:0px 2px 5px rgba(0,0,0,.3);
+    border-radius: 25px;
 
 }
 
 .price{
 font-size:20px;
 }
+
+.carousel-inner{
+ border-radius: 25px;
+ margin: 0px 0px 0px;
+}
 .boxxing{
-    background: #ffffff;
-    margin: 100px 450px 300px;
+    margin: 10px 450px 300px;
     border: solid 2px #e6e6e6;
     box-sizing: 250px 200px;
     padding: 15px;
     align: center;
+    background: rgba(255,255,255, 1.0);
+    border-radius: 25px;
 }
 
 /* Latest Products Styles */
@@ -148,6 +162,23 @@ font-size:20px;
     color: #000000;
     text-align: center;
     text-transform: uppercase;
+    border-radius: 25px;
+}
+
+#hot2 h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+#hot2{
+    margin: 20px 120px 5px 120px;
+}
+
+#hot{
+    margin: 100px 100px 10px 100px;
 }
 
 #content{
@@ -175,6 +206,7 @@ font-size:20px;
 .product a img.img-responsive{
     max-height: 252px;
     width: 100%;
+    border-radius: 25px;
 }
 #content #productMain{
     margin-bottom: 30px;

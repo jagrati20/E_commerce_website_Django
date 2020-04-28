@@ -62,7 +62,10 @@
            <div class="container">
                <div class="col-md-12">
                    <h2>
+                       <img src="{% static 'home/images/logo-shoes.jpg' %}" alt="Avatar" style="width:50px">
                        <a href="#top">SHOES</a>
+                       <img src="{% static 'home/images/logo-shoes.jpg' %}" alt="Avatar" style="width:50px">
+
                    </h2>
                </div><!-- col-md-12 ends -->
            </div><!-- container ends -->
@@ -85,9 +88,15 @@
                         </h3>
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
-                            <a href="{%url 'cart'%}" class="btn btn-primary">
+                            {%if user.is_authenticated%}
+                            <a href="{%url 'add_cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
+                            {% else %}
+                            <a href="{%url 'register'%}" class="btn btn-primary">
+                                Add to Cart
+                            </a>
+                            {% endif %}
                         </p>
                     </div><!-- text ends -->
            </div><!-- product ends -->
@@ -106,7 +115,10 @@
            <div class="container">
                <div class="col-md-12">
                    <h2 id="tshirt">
+                       <img class="rounding" src="{% static 'home/images/tshirt-logo.png' %}" alt="Avatar" style="width:50px">
                        <a href="#top" >T-SHIRTS</a>
+                        <img class="rounding" src="{% static 'home/images/tshirt-logo.png' %}" alt="Avatar" style="width:50px">
+
                    </h2>
                </div><!-- col-md-12 ends -->
            </div><!-- container ends -->
@@ -132,10 +144,15 @@
                         </h3>
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
-
-                            <a href="{%url 'cart'%}" class="btn btn-primary">
+                            {%if user.is_authenticated%}
+                            <a href="{%url 'add_cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
+                            {% else %}
+                            <a href="{%url 'register'%}" class="btn btn-primary">
+                                Add to Cart
+                            </a>
+                            {% endif %}
                         </p>
                     </div><!-- text ends -->
            </div><!-- product ends -->
@@ -152,7 +169,10 @@
            <div class="container">
                <div class="col-md-12">
                    <h2>
+                       <img class="rounding" src="{% static 'home/images/shirt-logo.png' %}" alt="Avatar" style="width:50px">
                        <a href="#top">SHIRTS</a>
+                       <img class="rounding" src="{% static 'home/images/shirt-logo.png' %}" alt="Avatar" style="width:50px">
+
                    </h2>
                </div><!-- col-md-12 ends -->
            </div><!-- container ends -->
@@ -179,9 +199,15 @@
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
 
-                            <a href="{%url 'cart'%}" class="btn btn-primary">
+                            {%if user.is_authenticated%}
+                            <a href="{%url 'add_cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
+                            {% else %}
+                            <a href="{%url 'register'%}" class="btn btn-primary">
+                                Add to Cart
+                            </a>
+                            {% endif %}
                         </p>
                     </div><!-- text ends -->
            </div><!-- product ends -->
@@ -200,7 +226,10 @@
            <div class="container">
                <div class="col-md-12">
                    <h2>
+                       <img class="rounding" src="{% static 'home/images/bags-logo.png' %}" alt="Avatar" style="width:50px">
                        <a href="#top">BAGS</a>
+                       <img class="rounding" src="{% static 'home/images/bags-logo.png' %}" alt="Avatar" style="width:50px">
+
                    </h2>
                </div><!-- col-md-12 ends -->
            </div><!-- container ends -->
@@ -226,9 +255,15 @@
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
 
-                            <a href="{%url 'cart'%}" class="btn btn-primary">
+                            {%if user.is_authenticated%}
+                            <a href="{%url 'add_cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
+                            {% else %}
+                            <a href="{%url 'register'%}" class="btn btn-primary">
+                                Add to Cart
+                            </a>
+                            {% endif %}
                         </p>
                     </div><!-- text ends -->
            </div><!-- product ends -->
@@ -245,7 +280,10 @@
            <div class="container">
                <div class="col-md-12">
                    <h2>
+                       <img src="{% static 'home/images/logo-jeans.jpg' %}" alt="Avatar" style="width:50px">
                        <a href="#top">JEANS</a>
+                       <img src="{% static 'home/images/logo-jeans.jpg' %}" alt="Avatar" style="width:50px">
+
                    </h2>
                </div><!-- col-md-12 ends -->
            </div><!-- container ends -->
@@ -271,9 +309,15 @@
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
 
-                            <a href="{%url 'cart'%}" class="btn btn-primary">
+                            {%if user.is_authenticated%}
+                            <a href="{%url 'add_cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
+                            {% else %}
+                            <a href="{%url 'register'%}" class="btn btn-primary">
+                                Add to Cart
+                            </a>
+                            {% endif %}
                         </p>
                     </div><!-- text ends -->
            </div><!-- product ends -->
@@ -290,7 +334,10 @@
            <div class="container">
                <div class="col-md-12">
                    <h2>
+                       <img src="{% static 'home/images/logo-dress.jpg' %}" alt="Avatar" style="width:50px">
                        <a href="#top">DRESS</a>
+                       <img src="{% static 'home/images/logo-dress.jpg' %}" alt="Avatar" style="width:50px">
+
                    </h2>
                </div><!-- col-md-12 ends -->
            </div><!-- container ends -->
@@ -316,9 +363,15 @@
                         <p class="price">$ {{post.prod_price}}</p>
                         <p class="button">
 
-                            <a href="{%url 'cart'%}" class="btn btn-primary">
+                            {%if user.is_authenticated%}
+                            <a href="{%url 'add_cart'%}" class="btn btn-primary">
                                 Add to Cart
                             </a>
+                            {% else %}
+                            <a href="{%url 'register'%}" class="btn btn-primary">
+                                Add to Cart
+                            </a>
+                            {% endif %}
                         </p>
                     </div><!-- text ends -->
            </div><!-- product ends -->
@@ -337,7 +390,10 @@
                <div class="container">
                    <div class="col-md-12">
                        <h2>
+                           <img src="{% static 'home/images/logo-coats.jpg' %}" alt="Avatar" style="width:50px">
                            <a href="#top">JACKETS</a>
+                           <img  src="{% static 'home/images/logo-coats.jpg' %}" alt="Avatar" style="width:50px">
+
                        </h2>
                    </div><!-- col-md-12 ends -->
                </div><!-- container ends -->
@@ -364,9 +420,15 @@
                                     <p class="price">$ {{post.prod_price}}</p>
                                     <p class="button">
 
-                                        <a href="{%url 'cart'%}" class="btn btn-primary">
+                                        {%if user.is_authenticated%}
+                                        <a href="{%url 'add_cart'%}" class="btn btn-primary">
                                             Add to Cart
                                         </a>
+                                        {% else %}
+                                        <a href="{%url 'register'%}" class="btn btn-primary">
+                                            Add to Cart
+                                        </a>
+                                        {% endif %}
                                     </p>
                                 </div><!-- text ends -->
                        </div><!-- product ends -->
