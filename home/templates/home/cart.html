@@ -1,34 +1,54 @@
 {%extends "home/base.html"%}
-
+{%load static%}
 {%block content%}
-<h3 align="center">Hello {{ user.username }}!</h3>
-<center><small>Happy Shopping</small></center>
-<div class="boxxing">
+<center>
+<img src="{% static 'home/images/hello.gif' %}" alt="Website Logo" height="150" width="300">
+</center>
+<center style="color:white; font-size:40px; text-transform:capitalize;;">Happy Shopping, {{ user.username }}!
+</center>
 
-<h3 align="center">The following item are in your cart</h3>
-{%for prod in prods%}
-<div class=" col-sm-5"><!-- col-md-9 Begin -->
-   <div class="box"><!-- box Begin -->
-       <div class="box-header"><!-- box-header Begin -->
-           <div class="product">
-                    <a href="#">
-                        <img class="img-responsive" src="{{prod.prod_image.url}}" alt="Product1">
-                    </a>
-                    <div class="text">
-                        <h3>
-                            {{prod.prod_title}}
-                        </h3>
-                        <p class="price">$ {{prod.prod_price}}</p>
-                        <p class="button">
-                            <a href="{%url 'remove_cart' prod.id%}" class="btn btn-primary">
-                                Remove from Cart
-                            </a>
-                        </p>
-                    </div><!-- text ends -->
-           </div><!-- product ends -->
-       </div>
+
+<div class="boxxing">
+    <h3 align="center">The following item are in your cart</h3>
+    {%for prod in prods%}
+    <div class="container">
+        <div class=" col-sm-5"><!-- col-md-9 Begin -->
+            <div class="boxed"><!-- box Begin -->
+                <div class="box-header"><!-- box-header Begin -->
+                    <div class="product">
+                        <a href="#">
+                            <img class="img-responsive" src="{{prod.prod_image.url}}" alt="Product1">
+                        </a>
+                        <div class="text">
+                            <center><h3>
+                                {{prod.prod_title}}
+                            </h3>
+                            </center>
+                            <center><p class="price">$ {{prod.prod_price}}</p></center>
+                            <center><p class="button">
+                                <a href="{%url 'remove_cart' prod.id%}" class="btn btn-primary">
+                                    Remove from Cart
+                                </a>
+                            </p>
+                            </center>
+                        </div><!-- text ends -->
+                    </div><!-- product ends -->
+
+                </div>
+            </div>
+        </div>
     </div>
+    {%endfor%}
+    <center><p class="button">
+        <a href="#" class="btn btn-primary">
+            Checkout
+        </a>
+    </p>
+    </center>
 </div>
-{%endfor%}
+
+<div class="container">
+
 </div>
+
 {%endblock content%}

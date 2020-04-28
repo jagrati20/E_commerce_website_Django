@@ -76,3 +76,4 @@ def remove_prods_cart(request, product_id):
     l = list(filter(product_id.__ne__, l))
     request.session['product'] = l
     return redirect(reverse('cart'))
+
